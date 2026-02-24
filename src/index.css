@@ -1,0 +1,27 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:      #111;
+  --bg2:     #181818;
+  --bg3:     #1f1f1f;
+  --border:  #272727;
+  --border2: #1c1c1c;
+  --text:    #ddd;
+  --dim:     #555;
+  --mid:     #888;
+  --green:   #4ade80;
+  --red:     #f87171;
+  font-family: system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
