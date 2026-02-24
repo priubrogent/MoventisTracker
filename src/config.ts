@@ -17,7 +17,7 @@ export const STOPS: StopConfig[] = [
     id: 'fabra',
     name: 'Fabra i Puig',
     direction: 'uab',
-    url: '/moventis/api/json/GetTiemposParada/es/1850/299/0',
+    url: '/moventis/api/json/GetTiemposParada/es/12512/299/0',
   },
   {
     id: 'mercat',
