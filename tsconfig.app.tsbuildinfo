@@ -1,1 +1,1 @@
-{"root":["./src/App.tsx","./src/StopCard.tsx","./src/config.ts","./src/main.tsx","./src/types.ts","./src/useStopData.ts","./src/utils.ts"],"version":"5.8.3"}
+{"root":["./src/App.tsx","./src/StopCard.tsx","./src/config.ts","./src/main.tsx","./src/types.ts","./src/useStopData.ts","./src/utils.ts","./src/widget/WidgetPage.tsx","./src/widget/main.tsx"],"version":"5.8.3"}

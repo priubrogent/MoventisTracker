@@ -26,7 +26,7 @@ function computeArrival(mins: number, secs: number): string {
   })
 }
 
-export function extractE3Buses(lines: ApiLine[]): ParsedBus[] {
+export function extractE3Buses(lines: ApiLine[], maxScheduled = MAX_SCHEDULED): ParsedBus[] {
   const e3 = lines.find((l) => l.selected === 1)
   if (!e3) return []
 
@@ -48,7 +48,7 @@ export function extractE3Buses(lines: ApiLine[]): ParsedBus[] {
     } else {
       const entries = (Object.values(value) as ScheduledBus[])
         .sort((a, b) => parseTiempoMinutes(a.tiempo) - parseTiempoMinutes(b.tiempo))
-        .slice(0, MAX_SCHEDULED)
+        .slice(0, maxScheduled)
 
       for (const bus of entries) {
         scheduled.push({
@@ -64,7 +64,7 @@ export function extractE3Buses(lines: ApiLine[]): ParsedBus[] {
   live.sort((a, b) => a.minutes - b.minutes || (a.seconds ?? 0) - (b.seconds ?? 0))
   scheduled.sort((a, b) => a.minutes - b.minutes)
 
-  return [...live, ...scheduled.slice(0, MAX_SCHEDULED)]
+  return [...live, ...scheduled.slice(0, maxScheduled)]
 }
 
 // "22'12"" for live,  "22 min" for scheduled
